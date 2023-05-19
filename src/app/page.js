@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import {desc} from "@/base/siteConfig";
-import CardCategory from "@/components/CardCategory";
+import CardUser from "@/components/CardUser";
 import {getCategories} from "@/data/Categories";
 import {GetProducts} from "@/app/products/GetProducts";
 import {GetCategories} from "@/app/categories/GetCategories";
@@ -73,6 +73,8 @@ export default async function Home() {
 
               <GetCategories />
           </section>
+
+          <br/>
 
           <section>
               <h1 className="font-bold text-pink-700 text-4xl my-3 text-center rounded border-b-2 border-gray-500 pb-2">

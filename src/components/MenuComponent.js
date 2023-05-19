@@ -8,7 +8,7 @@ function MenuComponent(props) {
         <Navbar
             fluid={true}
             rounded={true}
-            className={"max-w-screen-xl mx-auto dark:bg-gray-900 sm:px-0 sticky top-0 left-0 border-b-2 border-gray-500"}
+            className={"max-w-screen-xl mx-auto dark:bg-gray-900 sm:px-0 sticky top-0 left-0 border-b-2 border-gray-500 z-10"}
         >
             <Navbar.Brand href="#" as={Link} className={"border-b-2 border-pink-700"}>
                 <span className="self-center whitespace-nowrap text-xl dark:text-white mb-1 font-black">BEGOINGTO</span>
@@ -27,17 +27,8 @@ function MenuComponent(props) {
                 >
                     Home
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="/products">
-                    Products
-                </Navbar.Link>
-                <Navbar.Link as={Link} href="/categories">
-                    Categories
-                </Navbar.Link>
-                <Navbar.Link as={Link} href="/peoples">
-                    People
-                </Navbar.Link>
-                <Navbar.Link as={Link} href="#">
-                    Contact
+                <Navbar.Link as={Link} href="/products/create">
+                    <i className="bi bi-plus-lg"></i> Add Products
                 </Navbar.Link>
             </Navbar.Collapse>
         </Navbar>

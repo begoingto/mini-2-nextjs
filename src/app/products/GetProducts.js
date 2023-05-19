@@ -14,6 +14,7 @@ export async function GetProducts() {
                 title={product.title}
                 description={product.description}
                 price={product.price}
+                category={product.category}
                 id={product.id}
             />)}
         </div>

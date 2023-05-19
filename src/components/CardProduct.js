@@ -1,15 +1,17 @@
+'use client'
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import {moneyFormat} from "@/base/siteConfig";
+import {Badge} from "flowbite-react";
 
-export default function CardProduct({image, title, description, id, price}) {
+export default function CardProduct({image, title, description, id, price, category}) {
     return (
         <div
             className="max-w-sm border dark:border-gray-600 rounded-lg shadow dark:text-white"
         >
             <a href="#">
-                <img className="rounded-t-lg" src={image ? image : "https://bit.ly/44Oio4m"} alt="product"/>
+                <Image width={100} height={100} className="rounded-t-lg h-80 w-full" src={image ? image : "https://bit.ly/44Oio4m"} alt="product"/>
             </a>
             <div className="p-5">
                 <a href="#">
@@ -17,6 +19,9 @@ export default function CardProduct({image, title, description, id, price}) {
                         {title ? title : "Default title product"}
                     </h5>
                 </a>
+                <Badge color="indigo" className={"w-fit"}>
+                    {category.name}
+                </Badge>
                 <p className="mb-3 font-normal">{ description ? description.substring(0,50).concat("...") : "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order." }</p>
                 <div className="flex items-center mt-2.5 mb-5">
                     <i className="bi bi-star-fill text-yellow-200"></i>

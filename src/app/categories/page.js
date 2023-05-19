@@ -1,5 +1,6 @@
 import React from 'react';
 import {GetCategories} from "@/app/categories/GetCategories";
+import CategoryComponent from "@/app/categories/CategoryComponent";
 
 function Category() {
     return (
