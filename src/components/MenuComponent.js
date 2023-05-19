@@ -27,14 +27,14 @@ function MenuComponent(props) {
                 >
                     Home
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="#">
-                    About
+                <Navbar.Link as={Link} href="/products">
+                    Products
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="#">
-                    Services
+                <Navbar.Link as={Link} href="/categories">
+                    Categories
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="#">
-                    Pricing
+                <Navbar.Link as={Link} href="/peoples">
+                    People
                 </Navbar.Link>
                 <Navbar.Link as={Link} href="#">
                     Contact

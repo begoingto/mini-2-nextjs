@@ -1,5 +1,11 @@
+'use client'
 import React from "react";
 import {desc} from "@/base/siteConfig";
+import CardCategory from "@/components/CardCategory";
+import {getCategories} from "@/data/Categories";
+import {GetProducts} from "@/app/products/GetProducts";
+import {GetCategories} from "@/app/categories/GetCategories";
+import {GetUsers} from "@/app/peoples/GetUsers";
 
 export const metadata = {
     title: 'Home - BEGOINGTO',
@@ -30,7 +36,9 @@ export const metadata = {
     }
 }
 
-export default function Home() {
+export default async function Home() {
+
+    const categories = await getCategories();
   return (
       <>
           <div className="flex min-h-screen flex-col items-center justify-center">
@@ -46,6 +54,34 @@ export default function Home() {
                   <i className="bi bi-mortarboard"></i>
               </h1>
           </div>
+          <section>
+              <h1 className="font-bold text-pink-700 text-4xl my-3 text-center rounded border-b-2 border-gray-500 pb-2">
+                  Fetch Products
+                  <i className="bi bi-product"></i>
+              </h1>
+
+              <GetProducts />
+          </section>
+
+          <br/>
+
+          <section>
+              <h1 className="font-bold text-pink-700 text-4xl my-3 text-center rounded border-b-2 border-gray-500 pb-2">
+                  Fetch Categories
+                  <i className="bi bi-product"></i>
+              </h1>
+
+              <GetCategories />
+          </section>
+
+          <section>
+              <h1 className="font-bold text-pink-700 text-4xl my-3 text-center rounded border-b-2 border-gray-500 pb-2">
+                  Fetch Users
+                  <i className="bi bi-product"></i>
+              </h1>
+
+              <GetUsers />
+          </section>
       </>
   )
 }

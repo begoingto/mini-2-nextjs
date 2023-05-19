@@ -5,6 +5,8 @@ import {Inter} from 'next/font/google'
 import MenuComponent from "@/components/MenuComponent";
 import FooterComponent from "@/components/FooterComponent";
 import {desc} from "@/base/siteConfig";
+import {Suspense} from "react";
+import Loading from "@/app/loading";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -24,7 +26,9 @@ export default function RootLayout({children}) {
             <body className={inter.className + " dark:bg-gray-900 dark:text-white"}>
                 <MenuComponent />
                 <main className="max-w-screen-xl mx-auto ">
-                    {children}
+                    <Suspense fallback={<Loading />}>
+                        {children}
+                    </Suspense>
                 </main>
                 <FooterComponent />
             </body>
