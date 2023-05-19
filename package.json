@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
+    "bootstrap-icons": "^1.10.5",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "flowbite": "^1.6.5",

@@ -1,0 +1,1 @@
+export const desc = 'welcome to begoingto website, I am Begoingto, I first scholarship of full stack web development. I come from SETEC institute.'

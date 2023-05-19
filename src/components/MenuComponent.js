@@ -8,15 +8,12 @@ function MenuComponent(props) {
         <Navbar
             fluid={true}
             rounded={true}
-            className={"max-w-screen-xl mx-auto dark:bg-gray-900 sm:px-0"}
+            className={"max-w-screen-xl mx-auto dark:bg-gray-900 sm:px-0 sticky top-0 left-0 border-b-2 border-gray-500"}
         >
-            <Navbar.Brand href="#" as={Link} className={"border-b-2 border-red-600"}>
+            <Navbar.Brand href="#" as={Link} className={"border-b-2 border-pink-700"}>
                 <span className="self-center whitespace-nowrap text-xl dark:text-white mb-1 font-black">BEGOINGTO</span>
             </Navbar.Brand>
             <div className="flex md:order-2">
-                {/*<Button>*/}
-                {/*    Get started*/}
-                {/*</Button>*/}
                 <Flowbite theme={{dark:true}}>
                     <DarkThemeToggle />
                 </Flowbite>
