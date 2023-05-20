@@ -20,8 +20,6 @@ function SideBar({content}) {
     const active = "bg-gray-100 dark:bg-gray-700"
     const pathname = usePathname()
 
-    console.log(pathname)
-
     return (
         <>
             <nav
@@ -39,7 +37,7 @@ function SideBar({content}) {
                                           d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                                 </svg>
                             </button>
-                            <Link href="/" className="flex ml-2 md:mr-24">
+                            <Link href={"/"} className="flex ml-2 md:mr-24">
                                 <Image unoptimized width={100} height={100} src="https://istad.co/resources/img/logo_md.png" className="h-8 mr-3 w-full"
                                        alt="FlowBite Logo"/>
                                 <span
@@ -86,7 +84,7 @@ function SideBar({content}) {
                 <Sidebar.Items>
                     <Sidebar.ItemGroup>
                         <Sidebar.Item
-                            href="/admin/dashboard"
+                            href={"/admin/dashboard"}
                             as={Link}
                             icon={HiChartPie}
                             className={pathname.includes("dashboard") ? active : ""}
@@ -94,7 +92,7 @@ function SideBar({content}) {
                             Dashboard
                         </Sidebar.Item>
                         <Sidebar.Item
-                            href="/admin/products"
+                            href={"/admin/products"}
                             as={Link}
                             icon={RiProductHuntLine}
                             className={pathname.includes("products") ? active : ""}
