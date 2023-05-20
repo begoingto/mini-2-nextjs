@@ -11,7 +11,7 @@ export default function CardProduct({image, title, description, id, price, categ
             className="max-w-sm border dark:border-gray-600 rounded-lg shadow dark:text-white"
         >
             <a href="#">
-                <Image width={100} height={100} className="rounded-t-lg h-80 w-full" src={image ? image : "https://bit.ly/44Oio4m"} alt="product"/>
+                <Image unoptimized width={100} height={100} className="rounded-t-lg h-80 w-full" src={image ? image : "https://bit.ly/44Oio4m"} alt="product"/>
             </a>
             <div className="p-5">
                 <a href="#">

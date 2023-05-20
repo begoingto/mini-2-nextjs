@@ -138,7 +138,7 @@ function ActionFile({ field, form, setFieldValue,completed,...props}) {
         <>
             <label htmlFor="file" className="flex justify-center hover:cursor-pointer relative">
                 {loadingImg ? <LoadingIndicator className="absolute -translate-y-1/2 -translate-x-1/2 top-2/4 left-1/2" /> : ''}
-                <Image width={100} height={100} className="w-full h-44 object-cover rounded border-2 border-blue-700 hover:border-green-700" src={ previewImg ? previewImg : "https://bit.ly/3IJvVBd"} alt="a large avatar" />
+                <Image unoptimized width={100} height={100} className="w-full h-44 object-cover rounded border-2 border-blue-700 hover:border-green-700" src={ previewImg ? previewImg : "https://bit.ly/3IJvVBd"} alt="a large avatar" />
             </label>
             <input
                 type="file"

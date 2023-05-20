@@ -40,7 +40,7 @@ function SideBar({content}) {
                                 </svg>
                             </button>
                             <Link href="/" className="flex ml-2 md:mr-24">
-                                <Image width={100} height={100} src="https://istad.co/resources/img/logo_md.png" className="h-8 mr-3 w-full"
+                                <Image unoptimized width={100} height={100} src="https://istad.co/resources/img/logo_md.png" className="h-8 mr-3 w-full"
                                        alt="FlowBite Logo"/>
                                 <span
                                     className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">ISTAD</span>

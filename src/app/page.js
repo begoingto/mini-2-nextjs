@@ -1,15 +1,16 @@
-'use client'
+"use client"
 import React from "react";
 import {desc} from "@/base/siteConfig";
 import {getCategories} from "@/data/Categories";
 import {GetProducts} from "@/app/products/GetProducts";
 import {GetCategories} from "@/app/categories/GetCategories";
 import {GetUsers} from "@/app/peoples/GetUsers";
+import OgImage from "@/app/og-image.jpg"
 
-export const metadata = {
+
+const metadata = {
     title: 'Home - BEGOINGTO',
     description: desc,
-    url: '/',
     locale: 'en-US',
     category: 'education',
     type: 'website',
@@ -19,7 +20,7 @@ export const metadata = {
     openGraph:{
         images: [
             {
-                url: '/og-image.jpg',
+                url: OgImage,
                 width: 800,
                 height: 600,
             },
@@ -32,7 +33,7 @@ export const metadata = {
         },
         description: desc,
         creator: '@begoingtoMe',
-        images: ['/og-image.jpg'],
+        images: [OgImage],
     }
 }
 
