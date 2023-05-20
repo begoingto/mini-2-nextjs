@@ -7,7 +7,7 @@ import {GetProducts} from "@/app/products/GetProducts";
 import {GetCategories} from "@/app/categories/GetCategories";
 import {GetUsers} from "@/app/peoples/GetUsers";
 
-export const metadata = {
+const metadata = {
     title: 'Home - BEGOINGTO',
     description: desc,
     url: '/',
