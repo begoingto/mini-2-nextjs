@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import axios from "axios";
 import Link from "next/link";
 import LoadingIndicator from "@/components/LoadingIndicator";
-import ToastMessage from "@/components/toastMessage";
+import ToastMessage from "@/components/ToastMessage";
 import {FILE_SIZE, SUPPORTED_FORMATS} from "@/base/siteConfig";
 import Image from "next/image";
 import {getCategories} from "@/data/Categories";
