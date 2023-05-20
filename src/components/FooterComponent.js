@@ -1,7 +1,12 @@
+'use client'
 import React from 'react';
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 function FooterComponent(props) {
+    const pathname= usePathname();
+    if (pathname.includes("admin")) return null
+
     return (
         <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 px-0">

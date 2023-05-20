@@ -2,8 +2,11 @@
 import React from 'react';
 import {Button, DarkThemeToggle, Flowbite, Navbar} from "flowbite-react";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 function MenuComponent(props) {
+    const pathname= usePathname();
+    if (pathname.includes("admin")) return null
     return (
         <Navbar
             fluid={true}
@@ -27,8 +30,8 @@ function MenuComponent(props) {
                 >
                     Home
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="/products/create">
-                    <i className="bi bi-plus-lg"></i> Add Products
+                <Navbar.Link as={Link} href="/admin/dashboard">
+                    <i className="bi bi-speedometer2"></i> Admin
                 </Navbar.Link>
             </Navbar.Collapse>
         </Navbar>

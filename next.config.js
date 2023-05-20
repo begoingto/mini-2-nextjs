@@ -15,7 +15,11 @@ const nextConfig = {
             'img1.ak.crunchyroll.com',
             'bit.ly',
             'api.lorem.space',
-            'i.pravatar.cc'
+            'i.pravatar.cc',
+            'firebasestorage.googleapis.com',
+            'pushinka.top',
+            'robohash.org',
+            'istad.co'
         ],
         remotePatterns: [
             {
