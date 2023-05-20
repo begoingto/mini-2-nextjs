@@ -1,14 +1,11 @@
-"use client"
 import React from "react";
 import {desc} from "@/base/siteConfig";
-import {getCategories} from "@/data/Categories";
 import {GetProducts} from "@/app/products/GetProducts";
 import {GetCategories} from "@/app/categories/GetCategories";
 import {GetUsers} from "@/app/peoples/GetUsers";
-import OgImage from "@/app/og-image.jpg"
 
 
-const metadata = {
+export const metadata = {
     title: 'Home - BEGOINGTO',
     description: desc,
     locale: 'en-US',
@@ -20,7 +17,7 @@ const metadata = {
     openGraph:{
         images: [
             {
-                url: OgImage,
+                url: "/og-image.jpg",
                 width: 800,
                 height: 600,
             },
@@ -33,13 +30,12 @@ const metadata = {
         },
         description: desc,
         creator: '@begoingtoMe',
-        images: [OgImage],
+        images: ["/og-image.jpg"],
     }
 }
 
 export default async function Home() {
 
-    const categories = await getCategories();
   return (
       <>
           <div className="flex min-h-screen flex-col items-center justify-center">
