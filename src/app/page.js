@@ -8,7 +8,7 @@ import {GetUsers} from "@/app/peoples/GetUsers";
 import OgImage from "@/app/og-image.jpg"
 
 
-const metadata = {
+export const metadata = {
     title: 'Home - BEGOINGTO',
     description: desc,
     locale: 'en-US',

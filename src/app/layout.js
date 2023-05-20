@@ -13,7 +13,7 @@ const inter = Inter({subsets: ['latin']})
 
 
 
-const metadata = {
+export const metadata = {
     title: {
         template: '%s - BEGOINGTO'
     },
