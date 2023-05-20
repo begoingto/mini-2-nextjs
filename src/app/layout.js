@@ -1,4 +1,3 @@
-'use client'
 import './globals.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import {Inter} from 'next/font/google'
@@ -12,7 +11,7 @@ const inter = Inter({subsets: ['latin']})
 
 
 
-const metadata = {
+export const metadata = {
     title: {
         template: '%s - BEGOINGTO'
     },

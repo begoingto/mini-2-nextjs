@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import {getCategories} from "@/data/Categories";
 import CardUser from "@/components/CardUser";

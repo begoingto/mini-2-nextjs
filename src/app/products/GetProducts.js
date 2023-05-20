@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import CardProduct from "@/components/CardProduct";
 import {getProducts} from "@/data/Products";

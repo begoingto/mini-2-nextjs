@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import {getUsers} from "@/data/Users";
 import CardUser from "@/components/CardUser";

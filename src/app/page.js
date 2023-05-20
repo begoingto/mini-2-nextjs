@@ -1,7 +1,5 @@
-'use client'
 import React from "react";
 import {desc} from "@/base/siteConfig";
-import CardUser from "@/components/CardUser";
 import {getCategories} from "@/data/Categories";
 import {GetProducts} from "@/app/products/GetProducts";
 import {GetCategories} from "@/app/categories/GetCategories";
