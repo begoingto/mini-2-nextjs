@@ -13,7 +13,6 @@ export const metadata = {
     type: 'website',
     siteName: 'BEGOINGTO',
     manifest: '/manifest.json',
-    metadataBase: new URL('https://acme.com'),
     openGraph:{
         images: [
             {
