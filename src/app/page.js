@@ -14,6 +14,10 @@ export const metadata = {
     siteName: 'BEGOINGTO',
     manifest: '/manifest.json',
     openGraph:{
+        title: 'Home - BEGOINGTO',
+        description: desc,
+        url: '/',
+        siteName: 'BEGOINGTO',
         images: [
             {
                 url: "/og-image.jpg",

@@ -5,6 +5,11 @@ export async function getProducts(){
     return await res.json()
 }
 
+export async function getProduct(id){
+    const res = await fetch(`${API_URL}/products/${id}`,{ cache: "no-store"})
+    return await res.json()
+}
+
 export async function getProductsByCategory(id){
     const res = await fetch(`${API_URL}/categories/${id}/products`,{ cache: "no-store"})
     return await res.json()

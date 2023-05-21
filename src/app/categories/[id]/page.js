@@ -1,18 +1,41 @@
-'use client'
 import React from 'react';
 import {getCategoryById} from "@/data/Categories";
 import {getProductsByCategory} from "@/data/Products";
 import CardProduct from "@/components/CardProduct";
 import Image from "next/image";
+import {desc} from "@/base/siteConfig";
+
+export async function generateMetadata({ params }) {
+    const id = params.id;
+    const category = await getCategoryById(id)
+    return {
+        title: category.name,
+        description: desc,
+        category: category.name,
+        openGraph: {
+            title: category.name,
+            url: '/',
+            siteName: 'BEGOINGTO.ME',
+            images: [
+                category.image
+            ],
+            locale: 'en-US',
+            type: 'website',
+        },
+        twitter: {
+            card: 'category_detail',
+            title: category.name,
+            images: [
+                category.image
+            ],
+        }
+    };
+}
 
 async function CategoryDetail({params}) {
     const { id } = params
     const category = await getCategoryById(id);
-
-    console.log(category)
-
     const products = await getProductsByCategory(id);
-
 
     return (
         <div>

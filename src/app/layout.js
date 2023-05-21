@@ -30,9 +30,10 @@ export default function RootLayout({children}) {
             <body className={inter.className + " dark:bg-gray-900 dark:text-white"}>
                 <MenuComponent />
                 <main className={ !pathname.includes('admin') ? "max-w-screen-xl mx-auto" : ""}>
-                    <Suspense fallback={<Loading />}>
+                    {!pathname.includes('admin') ? <Suspense fallback={<Loading />}>
                         {children}
-                    </Suspense>
+                    </Suspense> : children}
+
                 </main>
                 <FooterComponent />
             </body>
