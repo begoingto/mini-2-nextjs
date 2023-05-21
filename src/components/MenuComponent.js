@@ -33,6 +33,9 @@ function MenuComponent(props) {
                 <Navbar.Link as={Link} href="/admin/dashboard">
                     <i className="bi bi-speedometer2"></i> Admin
                 </Navbar.Link>
+                <Navbar.Link as={Link} href="/about-us">
+                    <i className="bi bi-file-earmark-person"></i> About Us
+                </Navbar.Link>
             </Navbar.Collapse>
         </Navbar>
     );
