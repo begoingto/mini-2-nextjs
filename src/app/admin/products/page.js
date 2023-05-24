@@ -13,7 +13,7 @@ import axios from "axios";
 import ToastMessage from "@/components/ToastMessage";
 
 
-export const metadata = {
+const metadata = {
     title: "Product Management"
 }
 
