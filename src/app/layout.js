@@ -5,8 +5,6 @@ import {Inter} from 'next/font/google'
 import MenuComponent from "@/components/MenuComponent";
 import FooterComponent from "@/components/FooterComponent";
 import {desc} from "@/base/siteConfig";
-import {Suspense} from "react";
-import Loading from "@/app/loading";
 import {usePathname} from "next/navigation";
 
 const inter = Inter({subsets: ['latin']})
@@ -30,10 +28,7 @@ export default function RootLayout({children}) {
             <body className={inter.className + " dark:bg-gray-900 dark:text-white"}>
                 <MenuComponent />
                 <main className={ !pathname.includes('admin') ? "max-w-screen-xl mx-auto" : ""}>
-                    {!pathname.includes('admin') ? <Suspense fallback={<Loading />}>
-                        {children}
-                    </Suspense> : children}
-
+                    {children}
                 </main>
                 <FooterComponent />
             </body>

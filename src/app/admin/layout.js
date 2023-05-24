@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import LayoutDashboard from "@/components/LayoutDashboard";
+import Loading from "@/app/admin/loading";
+
+export const metadata = {
+    title: {
+        template: '%s - Admin BEGOINGTO'
+    },
+    description: "Begoingto admin panel"
+}
 
 function DashboardLayout({children}) {
     return (
         <LayoutDashboard>
-            {children}
+            <Suspense fallback={<Loading />}>
+                {children}
+            </Suspense>
         </LayoutDashboard>
     );
 }
