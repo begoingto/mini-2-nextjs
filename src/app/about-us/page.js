@@ -1,5 +1,6 @@
 import React from 'react';
 import {desc} from "@/base/siteConfig";
+import Image from "next/image";
 
 
 export const metadata = {
@@ -44,7 +45,7 @@ function AboutUs() {
                                 complex dashboard. Perfect choice for your next SaaS application.</p>
                         </blockquote>
                         <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                            <img className="w-6 h-6 rounded-full"
+                            <Image width={100} height={100} unoptimized className="w-6 h-6 rounded-full"
                                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
                                  alt="profile picture"/>
                                 <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
