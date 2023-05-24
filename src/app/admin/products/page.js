@@ -114,7 +114,7 @@ async function ManageProduct() {
                             console.log(data)
                             if (data) {
                                 setSuccess(true)
-                                setMessages(messages => [...messages,{type: 'success', msg: "User have been created successfully."}])
+                                setMessages(messages => [...messages,{type: 'success', msg: "Product have been created successfully."}])
                                 resetForm();
                             }
                             setLoadingSubmit(false)
