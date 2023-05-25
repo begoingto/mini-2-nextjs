@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import {desc} from "@/base/siteConfig";
 import Image from "next/image";
+import Loading from "@/components/loading";
 
 
 export const metadata = {
-    title: 'About Us - BEGOINGTO',
+    title: 'About Us',
     description: desc,
     openGraph:{
-        title: 'About Us - BEGOINGTO',
+        title: 'About Us',
         description: desc,
         images: [
             {
@@ -20,7 +21,7 @@ export const metadata = {
     twitter: {
         card: 'about_us',
         title: {
-            template: 'About Us - BEGOINGTO'
+            template: 'About Us'
         },
         description: desc,
         images: ["/og-image.jpg"],
@@ -29,7 +30,7 @@ export const metadata = {
 
 function AboutUs() {
     return (
-        <>
+        <Suspense fallback={<Loading />}>
             <section className="bg-white dark:bg-gray-900">
                 <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
                     <figure className="max-w-screen-md mx-auto">
@@ -159,7 +160,7 @@ function AboutUs() {
                     </div>
                 </div>
             </section>
-        </>
+        </Suspense>
     );
 }
 

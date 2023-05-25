@@ -1,8 +1,9 @@
-import React from "react";
+import React, {Suspense} from "react";
 import {desc} from "@/base/siteConfig";
 import {GetProducts} from "@/app/products/GetProducts";
 import {GetCategories} from "@/app/categories/GetCategories";
 import {GetUsers} from "@/app/peoples/GetUsers";
+import Loading from "@/components/loading";
 
 
 export const metadata = {
@@ -40,7 +41,7 @@ export const metadata = {
 export default async function Home() {
 
   return (
-      <>
+      <Suspense fallback={<Loading />}>
           <div className="flex min-h-screen flex-col items-center justify-center">
               <h1 className={"text-2xl text-center "}>Welcome</h1>
               <h1 className="font-bold text-pink-700 text-5xl my-3">
@@ -84,6 +85,6 @@ export default async function Home() {
 
               <GetUsers />
           </section>
-      </>
+      </Suspense>
   )
 }

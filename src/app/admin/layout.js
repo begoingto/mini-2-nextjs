@@ -6,7 +6,7 @@ export const metadata = {
     title: {
         template: '%s - Admin BEGOINGTO'
     },
-    description: "Begoingto admin panel"
+    description: "Begoingto Admin Panel"
 }
 
 function DashboardLayout({children}) {
