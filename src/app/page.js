@@ -1,4 +1,3 @@
-'use client'
 import React, {Suspense} from "react";
 import {desc} from "@/base/siteConfig";
 import {GetProducts} from "@/app/products/GetProducts";
