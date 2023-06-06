@@ -1,4 +1,3 @@
-"use client"
 import React from 'react';
 import {desc} from "@/base/siteConfig";
 import BarChart from '@/components/charts/BarChart';

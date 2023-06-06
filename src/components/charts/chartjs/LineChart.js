@@ -1,3 +1,4 @@
+"use client"
 import React, {Component} from 'react';
 import { Chart as ChartJS } from 'chart.js/auto'
 import {Line} from 'react-chartjs-2';
