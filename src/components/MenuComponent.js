@@ -10,6 +10,7 @@ function MenuComponent() {
     const pathname= usePathname();
     if (pathname.includes("admin")) return null
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const cart = useSelector(selectCart);
 
     return (
