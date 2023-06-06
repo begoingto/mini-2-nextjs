@@ -2,15 +2,20 @@
 import React from 'react';
 import {Avatar, DarkThemeToggle, Dropdown, Flowbite, Sidebar} from "flowbite-react";
 import {
-    BiBuoy,
-    HiArrowSmRight,
     HiChartPie,
     HiInbox,
     HiShoppingBag,
+    HiUser
+} from "react-icons/hi2";
+import {
+    BiBuoy
+} from "react-icons/bi";
+import {
+    HiArrowSmRight,
     HiTable,
-    HiUser,
-    HiViewBoards, RiProductHuntLine
-} from "react-icons/all";
+    HiViewBoards
+} from "react-icons/hi";
+import {RiProductHuntLine} from "react-icons/ri"
 import Link from "next/link";
 import Image from "next/image";
 import {usePathname} from "next/navigation";
@@ -46,7 +51,7 @@ function SideBar({content}) {
                         </div>
 
                         <div className={"flex"}>
-                            <Flowbite theme={{dark:true}}>
+                            <Flowbite theme={{dark:false}}>
                                 <DarkThemeToggle />
                             </Flowbite>
 

@@ -6,6 +6,7 @@ import MenuComponent from "@/components/MenuComponent";
 import FooterComponent from "@/components/FooterComponent";
 import {desc} from "@/base/siteConfig";
 import {usePathname} from "next/navigation";
+import ProviderRedux from '@/redux/ProviderRedux';
 
 const inter = Inter({subsets: ['latin']})
 
@@ -26,11 +27,13 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
             <body className={inter.className + " dark:bg-gray-900 dark:text-white"}>
-                <MenuComponent />
-                <main className={ !pathname.includes('admin') ? "max-w-screen-xl mx-auto" : ""}>
-                    {children}
-                </main>
-                <FooterComponent />
+                <ProviderRedux>
+                    <MenuComponent />
+                    <main className={ !pathname.includes('admin') ? "max-w-screen-xl mx-auto" : ""}>
+                            {children}
+                    </main>
+                    <FooterComponent />
+                </ProviderRedux>
             </body>
         </html>
     )

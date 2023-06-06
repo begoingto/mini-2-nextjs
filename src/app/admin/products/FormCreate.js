@@ -5,7 +5,7 @@ import {API_URL, FILE_SIZE, SUPPORTED_FORMATS, thumbnailDefault} from "@/base/si
 import axios from "axios";
 import {getCategories} from "@/data/Categories";
 import {Breadcrumb} from "flowbite-react";
-import {HiChartPie} from "react-icons/all";
+import {HiChartPie} from "react-icons/hi";
 import ToastMessage from "@/components/ToastMessage";
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import Link from "next/link";

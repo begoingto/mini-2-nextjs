@@ -1,12 +1,17 @@
 'use client'
 import React from 'react';
-import {Button, DarkThemeToggle, Flowbite, Navbar} from "flowbite-react";
+import {Badge, Button, DarkThemeToggle, Flowbite, Navbar} from 'flowbite-react';
 import Link from "next/link";
 import {usePathname} from "next/navigation";
+import {useSelector} from 'react-redux';
+import {selectCart} from '@/redux/features/cart/cartSlice';
 
-function MenuComponent(props) {
+function MenuComponent() {
     const pathname= usePathname();
     if (pathname.includes("admin")) return null
+
+    const cart = useSelector(selectCart);
+
     return (
         <Navbar
             fluid={true}
@@ -35,6 +40,12 @@ function MenuComponent(props) {
                 </Navbar.Link>
                 <Navbar.Link as={Link} href="/about-us">
                     <i className="bi bi-file-earmark-person"></i> About Us
+                </Navbar.Link>
+                <Navbar.Link as={Link} href="#" className={"flex justify-center"}>
+                    <i className="bi bi-cart text-xl"></i>
+                    <Badge color="success" className={"rounded-full p-1"}>
+                        {cart.length}
+                    </Badge>
                 </Navbar.Link>
             </Navbar.Collapse>
         </Navbar>
