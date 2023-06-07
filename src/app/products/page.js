@@ -1,7 +1,8 @@
 import React from 'react';
 import {GetProducts} from "@/app/products/GetProducts";
 
-function Products(props) {
+
+export default function Products() {
     return (
         <>
             <div className={"fixed bottom-10 right-10"}>
@@ -18,5 +19,3 @@ function Products(props) {
 
     );
 }
-
-export default Products;

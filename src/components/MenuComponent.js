@@ -42,7 +42,10 @@ function MenuComponent() {
                 <Navbar.Link as={Link} href="/about-us">
                     <i className="bi bi-file-earmark-person"></i> About Us
                 </Navbar.Link>
-                <Navbar.Link as={Link} href="#" className={"flex justify-center"}>
+                <Navbar.Link as={Link} href="/products">
+                    <i className="bi bi-tropical-storm"></i> Products
+                </Navbar.Link>
+                <Navbar.Link as={Link} href="/carts" className={"flex justify-center"}>
                     <i className="bi bi-cart text-xl"></i>
                     <Badge color="success" className={"rounded-full p-1"}>
                         {cart.length}

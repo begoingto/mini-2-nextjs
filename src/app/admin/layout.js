@@ -12,9 +12,9 @@ export const metadata = {
 function DashboardLayout({children}) {
     return (
         <LayoutDashboard>
-            <Suspense fallback={<Loading />}>
+            {/*<Suspense fallback={<Loading />}>*/}
                 {children}
-            </Suspense>
+            {/*</Suspense>*/}
         </LayoutDashboard>
     );
 }
