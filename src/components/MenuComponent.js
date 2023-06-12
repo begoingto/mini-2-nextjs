@@ -2,8 +2,8 @@
 import React from 'react';
 import {Badge, Button, DarkThemeToggle, Flowbite, Navbar} from 'flowbite-react';
 import Link from "next/link";
-import {usePathname} from "next/navigation";
-import {useSelector} from 'react-redux';
+import {usePathname} from 'next/navigation';
+import { useSelector} from 'react-redux';
 import {selectCart} from '@/redux/features/cart/cartSlice';
 
 function MenuComponent() {
@@ -27,6 +27,11 @@ function MenuComponent() {
                     <DarkThemeToggle />
                 </Flowbite>
                 <Navbar.Toggle/>
+                <Link href={"/sign-in"}
+                      className={"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}
+                >
+                    <span className={"uppercase px-3"}>Sign In</span>
+                </Link>
             </div>
             <Navbar.Collapse>
                 <Navbar.Link

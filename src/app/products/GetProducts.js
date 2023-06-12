@@ -11,7 +11,7 @@ export function GetProducts() {
     const status = useSelector(selectProductStatus);
 
     useEffect(() => {
-        dispatch(fetchProducts({limit: 10, offset: 0}));
+        dispatch(fetchProducts({limit: 100, offset: 0}));
     },[])
 
     if (status === 'loading') {
