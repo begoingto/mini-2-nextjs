@@ -3,6 +3,7 @@ import React from 'react';
 import {moneyFormat} from '@/base/siteConfig';
 import {useDispatch, useSelector} from 'react-redux';
 import { decreaseQuantity, increaseQuantity} from '@/redux/features/cart/cartSlice';
+import Image from 'next/image';
 
 function ItemCart({product}) {
     const dispatch = useDispatch();
@@ -19,7 +20,7 @@ function ItemCart({product}) {
         <tr>
             <td className="hidden pb-4 md:table-cell">
                 <a href="#">
-                    <img src={product.image}
+                    <Image width={100} height={100} unoptimized src={product.image}
                         className="w-20 rounded" alt="Thumbnail"/>
                 </a>
             </td>

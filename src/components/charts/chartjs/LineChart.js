@@ -1,7 +1,8 @@
 "use client"
 import React, {Component} from 'react';
-import { Chart as ChartJS } from 'chart.js/auto'
-import {Line} from 'react-chartjs-2';
+import dynamic from 'next/dynamic';
+
+const {Line} = dynamic(() => import('react-chartjs-2'), { ssr: false });
 
 class LineChart extends Component {
     constructor(props) {

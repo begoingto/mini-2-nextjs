@@ -44,9 +44,9 @@ export default async function Home() {
   return (
       <Suspense fallback={<Loading />}>
 
-          <div className="main-slide">
-              <MySwiper />
-          </div>
+          {/*<div className="main-slide">*/}
+          {/*    <MySwiper />*/}
+          {/*</div>*/}
 
           <div className="flex min-h-screen flex-col items-center justify-center">
               <h1 className={"text-2xl text-center "}>Welcome 2</h1>

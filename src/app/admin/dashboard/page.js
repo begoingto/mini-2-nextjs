@@ -35,7 +35,7 @@ function Dashboard(props) {
                     <BarChart />
                 </div>
                 <div className="col-span-8">
-                    <LineChart />
+                    {/*<LineChart />*/}
                 </div>
             </div>
         </div>

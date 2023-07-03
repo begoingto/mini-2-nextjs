@@ -159,6 +159,10 @@ function AboutUs() {
                         </div>
                     </div>
                 </div>
+                <div className="">
+                    <Image width={100} height={100} unoptimized className="h-auto max-w-full" src="/og-image.jpg"
+                         alt="image description" />
+                </div>
             </section>
         </Suspense>
     );

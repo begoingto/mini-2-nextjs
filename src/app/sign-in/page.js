@@ -4,6 +4,7 @@ import {useDispatch} from 'react-redux';
 import {setAuth} from '@/redux/features/auth/authSlice';
 import {useRouter} from 'next/navigation';
 import Loading from '@/components/loading';
+import Image from 'next/image';
 
 function Page(props) {
     const router = useRouter()
@@ -35,7 +36,7 @@ function Page(props) {
             <section className="bg-gray-50 dark:bg-gray-900">
                 <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-[70vh] lg:py-0">
                     <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                        <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />
+                        <Image unoptimized width={100} height={100} className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />
                             BEGOINGTO
                     </a>
                     <div
